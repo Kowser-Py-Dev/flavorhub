@@ -5,7 +5,10 @@ import BgImg from "../../../public/images/banner.png";
 
 const Banner = () => {
    return (
-      <main className="banner__section">
+      <main
+         className="banner__section"
+         style={{ backgroundImage: "url(./images/banner2.jpg)" }}
+      >
          <div className="overlay"></div>
          <div className="container flex__sb">
             <div className="banner__text">
