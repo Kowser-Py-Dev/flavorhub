@@ -1,0 +1,41 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.servies__section {
+   .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+   }
+   .s__card {
+      padding: 4rem 2rem;
+      background-color: $wh-color;
+      box-shadow: $bx-shadow;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      &:hover {
+         background-color: $pm-color;
+         h3,
+         svg,
+         p {
+            color: $wh-color;
+         }
+      }
+      svg {
+         font-size: 4rem;
+         color: $dk-color;
+      }
+      h3 {
+         font-family: "Nunito Sans", sans-serif;
+         color: $pm-color;
+         font-size: 2.2rem;
+         font-weight: 600;
+         padding: 0.5rem 0;
+         text-transform: capitalize;
+      }
+      p {
+         text-align: justify;
+         color: $pp-color;
+      }
+   }
+}

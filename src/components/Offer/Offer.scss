@@ -1,0 +1,56 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.offer__section {
+   .flex__sb {
+      flex-wrap: wrap;
+      gap: 3rem;
+      .card {
+         border-radius: 6px;
+         display: flex;
+         align-items: center;
+         gap: 3rem;
+         padding: 2.5rem;
+         //  flex-basis: 48%;
+         min-width: 45%;
+         max-width: 100%;
+         background-color: $dk-color;
+         color: $wh-color;
+         cursor: pointer;
+         transition: all ease 0.3s;
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         @include lg {
+            flex-direction: column;
+         }
+         @include md {
+            flex-direction: row;
+            flex-basis: 100%;
+         }
+         .card__img {
+            width: 16rem;
+            height: 16rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid $lg-color;
+            img {
+               transition: all ease 0.3s;
+               &:hover {
+                  transform: scale(1.1);
+               }
+            }
+         }
+         h4 {
+            padding: 1rem 0;
+            padding-bottom: 2rem;
+            font-size: 2.8rem;
+            span {
+               font-size: 2rem;
+               color: $pm-color;
+            }
+         }
+         h3 {
+            font-size: 3.8rem;
+         }
+      }
+   }
+}

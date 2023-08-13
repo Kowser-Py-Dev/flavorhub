@@ -1,0 +1,112 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.footer {
+   background-color: $dk-color;
+   .flex__sb {
+      flex-wrap: wrap;
+      align-items: unset;
+      @include lg {
+         row-gap: 5rem;
+      }
+   }
+   .col {
+      width: 25%;
+      @include lg {
+         width: 50%;
+      }
+      @include md {
+         width: 100%;
+      }
+      a {
+         font-size: 1.5rem;
+         color: $wh-color;
+         text-transform: capitalize;
+      }
+      h3 {
+         color: $pm-color;
+         font-size: 3rem;
+         text-transform: capitalize;
+         padding-bottom: 2rem;
+      }
+   }
+   .company {
+      display: flex;
+      flex-direction: column;
+      a {
+         transition: all 0.3s ease;
+         padding: 0.5rem 0;
+         &:hover {
+            letter-spacing: 1px;
+            color: $pm-color;
+         }
+         svg {
+            color: $pm-color;
+         }
+      }
+   }
+   .contact {
+      p {
+         color: $wh-color;
+         padding: 0.5rem 0;
+         svg {
+            padding-right: 0.3rem;
+            color: $pm-color;
+         }
+      }
+      .socail__icons {
+         margin-top: 1rem;
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         a {
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $wh-color;
+            &:hover {
+               background-color: $pm-color;
+            }
+         }
+      }
+   }
+   .opening {
+      color: $wh-color;
+      h5 {
+         font-size: 2.4rem;
+      }
+      p {
+         padding-bottom: 2rem;
+      }
+   }
+   .newsletter {
+      color: $wh-color;
+      .input__group {
+         padding: 0 1rem;
+         margin-top: 2rem;
+         height: 6rem;
+         width: 100%;
+         background-color: $wh-color;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @include md {
+            width: 70%;
+         }
+         input {
+            padding: 1rem;
+            border: none;
+            font-size: 1.4rem;
+         }
+         .submit {
+            padding: 1rem 1.4rem;
+            background-color: $pm-color;
+            cursor: pointer;
+            border-radius: 4px;
+            color: $wh-color;
+         }
+      }
+   }
+}

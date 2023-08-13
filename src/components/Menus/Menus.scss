@@ -1,0 +1,79 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.menu__section {
+   .filter__btns {
+      flex-wrap: wrap;
+      padding: 3rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      .btn__v {
+         cursor: pointer;
+         padding: 0.8rem 1.5rem;
+         font-size: 1.6rem;
+         text-transform: capitalize;
+         font-size: 1.4rem;
+         background-color: $dk-color;
+         color: $wh-color;
+         &.active {
+            background-color: $pm-color;
+         }
+      }
+   }
+   .menu__container {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+      .mn__card {
+         background-color: $dk-color;
+         cursor: pointer;
+         .mn__img {
+            width: 100%;
+            height: 23rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f2f3;
+            overflow: hidden;
+            border-bottom-left-radius: 3rem;
+            img {
+               width: 18rem;
+               height: 18rem;
+               transition: all 0.3s ease;
+               &:hover {
+                  transform: scale(1.2);
+               }
+            }
+         }
+      }
+      .mn__info {
+         min-height: 15rem;
+         padding: 3rem;
+         text-align: left;
+         .name {
+            font-size: 2.4rem;
+            color: $wh-color;
+         }
+         p {
+            padding: 1.5rem 0;
+            color: rgba(255, 255, 255, 0.7);
+         }
+         .options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .price {
+               font-size: 1.8rem;
+               color: $pm-color;
+               span {
+                  padding: 0 0.5rem;
+               }
+            }
+            .btn {
+               font-size: 1.4rem;
+            }
+         }
+      }
+   }
+}

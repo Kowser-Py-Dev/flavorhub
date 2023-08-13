@@ -1,0 +1,64 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.banner__section {
+   position: relative;
+   width: 100%;
+   height: calc(100vh - 8rem);
+   background-image: url("./images/banner2.jpg");
+   background-size: cover;
+   object-fit: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   @include md {
+      height: auto;
+   }
+   .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+   }
+
+   .banner__text {
+      padding: 2rem;
+      flex: 1;
+      color: $wh-color;
+      z-index: 9;
+      h1 {
+         font-size: 5rem;
+         text-transform: capitalize;
+      }
+      p {
+         padding: 2rem 0;
+      }
+   }
+   .banner__img {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+         padding: 1rem 0;
+         animation: bannerRotate 50s linear infinite;
+         @include md {
+            width: 70%;
+         }
+      }
+   }
+   @include md {
+      .flex__sb {
+         flex-direction: column-reverse;
+         justify-content: center;
+         padding: 10rem 0;
+      }
+   }
+}
+@keyframes bannerRotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}

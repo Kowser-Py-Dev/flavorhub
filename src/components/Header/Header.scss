@@ -1,0 +1,107 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.header {
+   width: 100%;
+   background-color: $dk-color;
+   @include md {
+      position: fixed;
+      z-index: 99;
+   }
+   .flex__sb {
+      height: 8rem;
+      .logo__container {
+         h1 {
+            display: inline;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: $pm-color;
+            text-transform: capitalize;
+         }
+         svg {
+            font-size: 3.2rem;
+            color: $pm-color;
+         }
+      }
+      .main__menu {
+         display: flex;
+         justify-content: flex-end;
+         gap: 3rem;
+         transition: all ease 0.5s;
+         &.slider {
+            transform: translateX(0);
+         }
+         @include md {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: $dk-color;
+            transform: translateX(100%);
+            gap: unset;
+         }
+         li {
+            text-transform: capitalize;
+            @include md {
+               padding: 1rem 3rem;
+               width: 100%;
+               &:hover {
+                  background-color: #576574;
+               }
+            }
+            a {
+               font-size: 1.6rem;
+               color: $wh-color;
+               &.active,
+               &:hover {
+                  color: $pm-color;
+               }
+               @include md {
+                  text-align: left;
+               }
+            }
+            .btn__v {
+               background-color: #576574;
+               padding: 0.8rem 1.2rem;
+               border-radius: 5px;
+            }
+         }
+      }
+      .mobile__menu {
+         width: 4rem;
+         height: 4rem;
+
+         justify-content: center;
+         align-items: center;
+         border: 1px solid $pm-color;
+         display: none;
+         font-size: 2rem;
+         color: $wh-color;
+         cursor: pointer;
+         @include md {
+            display: flex;
+            z-index: 9999;
+         }
+      }
+   }
+   &.stickyHeader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      animation: slideDown 0.5s ease-in-out;
+   }
+}
+@keyframes slideDown {
+   0% {
+      transform: translateY(-150px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}

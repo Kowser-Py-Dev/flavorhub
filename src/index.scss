@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&display=swap");
+@import "./sass/variable.scss";
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+body {
+   font-family: "Nunito Sans", sans-serif;
+   overflow-x: hidden;
+}
+button {
+   border: none;
+}
+input {
+   outline: none;
+}
+a {
+   text-decoration: none;
+}
+li {
+   list-style: none;
+}
+
+// base
+.container {
+   max-width: 1240px;
+   margin: 0 auto;
+   padding: 0 3%;
+}
+.flex__center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.flex__sb {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.flex {
+   display: flex;
+   gap: 2rem;
+}
+.grid {
+   display: grid;
+   gap: 2rem;
+}
+p {
+   font-size: 1.6rem;
+}
+h1,
+h2,
+h3 {
+   font-family: $fn-family;
+}
+h1 {
+   font-size: 6rem;
+}
+h1 {
+   font-size: 5.5rem;
+   text-transform: capitalize;
+}
+h2 {
+   font-size: 4rem;
+}
+h3 {
+   font-size: 3rem;
+}
+img {
+   max-width: 100%;
+   height: auto;
+}
+.spad {
+   padding: 8rem 0;
+}
+.spad__t {
+   padding-top: 8rem;
+}
+.spad__b {
+   padding-bottom: 8rem;
+}
+.section__heading {
+   text-align: center;
+   padding-bottom: 5rem;
+   h3 {
+      font-size: 3rem;
+      font-family: unset;
+      text-transform: capitalize;
+   }
+   .sub__heading {
+      position: relative;
+      font-size: 3rem;
+      font-family: "Dancing Script", cursive;
+      color: $pm-color;
+      text-transform: capitalize;
+   }
+   .sub__heading::after,
+   .sub__heading::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+
+      width: 4rem;
+      height: 2px;
+      background-color: $pm-color;
+   }
+   .sub__heading::after {
+      left: 110%;
+   }
+   .sub__heading::before {
+      right: 110%;
+   }
+}
+.text__up {
+   text-transform: uppercase;
+}
+.text__cap {
+   text-transform: capitalize;
+}
+.btn {
+   display: inline-block;
+   font-size: 1.6rem;
+   text-transform: uppercase;
+   color: $wh-color;
+   padding: 1.25rem 2.2rem;
+   background-color: $pm-color;
+   border-radius: 4px;
+   transition: all 0.3s ease;
+   font-weight: 700;
+   &:hover {
+      background-color: $lg-color;
+      transform: translateY(-10px);
+   }
+}
+.btn__v {
+   background-color: #576574;
+   padding: 0.8rem 1.2rem;
+   border-radius: 5px;
+}
