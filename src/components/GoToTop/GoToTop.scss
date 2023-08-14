@@ -1,0 +1,31 @@
+@import "../../sass/mixin.scss";
+@import "../../sass/variable.scss";
+
+.go__to__top {
+   width: 4rem;
+   height: 4rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   background-color: $pm-color;
+   right: 3rem;
+   bottom: 3rem;
+   cursor: pointer;
+   color: $wh-color;
+   animation: bounce 0.8s linear infinite;
+   svg {
+      font-size: 1.8rem;
+      font-weight: bold;
+   }
+}
+
+@keyframes bounce {
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-10px);
+   }
+}
